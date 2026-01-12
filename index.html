@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Vacations</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
+    <link href='https://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet'>
+    <link href="travel.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation bar Section -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#searches">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+        </ul>
+        <div class="logo" onclick="openModal()">
+            <img src="./images/vacation logo.png" alt="Logo">
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </nav>
+
+    <div id="logoModal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage" src="./images/vacation logo.png" alt="Full Logo">
+    </div>    
+
+    <section class="home">
+        <div class="content">
+            <h1>Welcome! <span>To Happy Vacation!</span></h1>
+            <p>Escape the ordinary, embrace the extraordinary, and make memories that last a lifetime. Start your journey with us!</p>
+            <a href="#" class="btn" id="signupBtn">Signup</a>
+        </div>
+    </section>
+
+    <!-- Modal for Sliding Sign Up and Sign In -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            
+            <div id="signupForm" class="form-container active">
+                <h2>Sign Up</h2>
+                <form>
+                    <label for="signupEmail">Email:</label>
+                    <input type="email" id="signupEmail" required>
+                    
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword" required>
+                    
+                    <button type="submit" class="btn-form">Sign Up</button>
+                </form>
+                <p>Already have an account? <a href="#" id="switchToSignin">Sign In</a></p>
+            </div>
+            
+            <div id="signinForm" class="form-container">
+                <h2>Sign In</h2>
+                <form>
+                    <label for="signinEmail">Email:</label>
+                    <input type="email" id="signinEmail" required>
+                    
+                    <label for="signinPassword">Password:</label>
+                    <input type="password" id="signinPassword" required>
+                    
+                    <button type="submit" class="btn-form">Sign In</button>
+                </form>
+                <p>Don't have an account? <a href="#" id="switchToSignup">Sign Up</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Searched destinations Page -->
+    <section class="explore-section text-center py-5" id="searches">
+        <h2>Explore The Top Searched Destinations🔥</h2>
+        <p class="lead">Are you ready to embark on an unforgettable adventure? 
+            From breathtaking natural landscapes to vibrant cultural experiences<br />
+            there's a world of wonders waiting to be explored. Explore now!
+        </p>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card">
+                        <img src="./images/topSearcches/Ladakh.jpg" class="card-img-left" alt="Ladakh">
+                        <div class="card-body">
+                            <h5 class="card-title">Ladakh</h5>
+                            <p class="card-text">Experience adventure in Ladakhs</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card">
+                        <img src="./images/topSearcches/Darjeeling.jpg" class="card-img-left" alt="Darjeeling">
+                        <div class="card-body">
+                            <h5 class="card-title">Darjeeling</h5>
+                            <p class="card-text">Discover the beauty of Darjeeling!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card">
+                        <img src="./images/topSearcches/Rajasthan.jpg" class="card-img-left" alt="Rajasthan">
+                        <div class="card-body">
+                            <h5 class="card-title">Rajasthan</h5>
+                            <p class="card-text">Explore majestic forts and palaces!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card">
+                        <img src="./images/topSearcches/Ayodhya.jpg" class="card-img-left" alt="Ayodhya">
+                        <div class="card-body">
+                            <h5 class="card-title">Ayodhya</h5>
+                            <p class="card-text">Immerse in spiritual heritage!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card">
+                        <img src="./images/topSearcches/Lakshadweep.jpg" class="card-img-left" alt=" Lakshadweep">
+                        <div class="card-body">
+                            <h5 class="card-title"> Lakshadweep</h5>
+                            <p class="card-text">Explore pristine islands and beaches!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card">
+                        <img src="./images/topSearcches/Coorg.jpg" class="card-img-left" alt="Coorg">
+                        <div class="card-body">
+                            <h5 class="card-title">Coorg</h5>
+                            <p class="card-text">Discover the beauty of Coorg!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card">
+                        <img src="./images/topSearcches/Mysuru.jpg" class="card-img-left" alt="Mysore">
+                        <div class="card-body">
+                            <h5 class="card-title">Mysore</h5>
+                            <p class="card-text">Experience Mysore's heritage!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card">
+                        <img src="./images/topSearcches/Lambasingi.jpg" class="card-img-left" alt="Lambasingi">
+                        <div class="card-body">
+                            <h5 class="card-title">Lambasingi</h5>
+                            <p class="card-text">The Kashmir of Andhra Pradesh!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                    <div class="card">
+                        <img src="./images/topSearcches/Manipur.jpg" class="card-img-left" alt="Manipur">
+                        <div class="card-body">
+                            <h5 class="card-title">Manipur</h5>
+                            <p class="card-text">Discover the beauty of Manipur!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <!-- About Us Part -->
+    <section class="about-us py-5" id="about">
+        <div class="container text-center">
+            <h2>About Us</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="about-image">
+                        <img src="./images/AboutUS.png" class="img-fluid" alt="Tourists Image">
+                    </div>
+                </div>
+                <div class="col-md-6 text-left">
+                    <h3>Explore All Tour Of TheCountry With Us.</h3>
+                    <p>HappyVacation is your one-stop destination for planning unforgettable travel experiences.
+                        We're passionate about helping you discover new adventures, explore hidden gems, and create lasting memories.</p>
+                    <p>From hidden gems to popular hotspots, we'll help you discover the perfect destination and 
+                        create memories that will last a lifetime. Let us be your guide to the world of travel.
+                    </p>
+
+                    <div class="row">
+                        <div class="col-12 col-md-auto d-flex flex-wrap">
+                            <a href="tour-guide-link.html" class="btn btn-primary btn-sm m-1">Tour Guide</a>
+                            <a href="#travel-perfection" class="btn btn-primary btn-sm m-1">Travel perfection</a>
+                            <a href="reliable-package-link.html" class="btn btn-primary btn-sm m-1">Reliable Tour Package</a>
+                        </div>
+                    </div>                    
+
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="stats py-4">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <div class="stat-box">
+                            <h4>05</h4>
+                            <p>Years Experiences</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <div class="stat-box">
+                            <h4>50+</h4>
+                            <p>Tour Packages</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <div class="stat-box">
+                            <h4>1000+</h4>
+                            <p>Happy Customers</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <div class="stat-box">
+                            <h4>45</h4>
+                            <p>Award Winning</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Core Features Section -->
+    <section class="core-features" id="travel-perfection">
+        <div class="container">
+            <h3 class="text-center">Find Travel Perfection</h3>
+            <p class="text-intro">Find your perfect travel match with HappyVacation. Our expert team will curate 
+                personalized itineraries tailored to your unique desires <br />ensuring an unforgettable adventure.</p>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="feature-box text-center">
+                        <h5>Tell Us What You Want To Do</h5>
+                        <p>Explain your tour ideas and our experts will assist you.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="feature-box text-center">
+                        <h5>Share Your Travel Locations</h5>
+                        <p>Tell us where you want to visit, and we'll take care of the rest.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="feature-box text-center">
+                        <h5>Share Your Travel Preference</h5>
+                        <p>We'll customize your experience based on your preferences.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="feature-box text-center">
+                        <h5>100% Trusted Tour Agency</h5>
+                        <p>We ensure the best travel experience, trusted by thousands.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Services Section -->
+     <section class="services-section" id="services">
+        <div class="container">
+            <h2>Services That We Offer ⛷️</h2>
+            <p>We offer a wide range of travel services to make your vacation unforgettable. Discover all we have to offer for your next adventure!</p>
+           
+            <div class="services-grid">
+                <div class="service-item">
+                    <i class="fas fa-landmark"></i>
+                    <h3>Heritage Tour Package</h3>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-hotel"></i>
+                    <h3>Hotel Reservations</h3>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Tour Guides</h3>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-car"></i>
+                    <h3>Car Rentals</h3>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-umbrella-beach"></i>
+                    <h3>Beach Getaways</h3>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-skiing"></i>
+                    <h3>Adventure Packages</h3>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Easy Booking Process</h3>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-users"></i>
+                    <h3>Group Tours</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+     <!-- Main Section -->
+    <section class="main-section" id="contact">
+        <h2>Contact Us</h2>
+        <p>Ready to embark on your next journey? Get in touch with us to discuss your travel plans 
+            and receive personalized recommendations.</p>
+        <div class="contact-info">
+            <div>
+                <i class="fas fa-envelope fa-2x"></i>
+                <h3>Email Address</h3>
+                <p>happyvac@gmail.com.com<br>support@vacation.com</p>
+            </div>
+            <div>
+                <i class="fas fa-phone fa-2x"></i>
+                <h3>Phone Number</h3>
+                <p>(100) 1234 5678<br>(030) 8765 9431</p>
+            </div>
+            <div>
+                <i class="fas fa-map-marker-alt fa-2x"></i>
+                <h3>Agency Location</h3>
+                <p>Magestic Road,Bangalore, Karnataka, India</p>
+            </div>
+            <div>
+                <i class="fas fa-clock fa-2x"></i>
+                <h3>Work Day</h3>
+                <p>Sun - Fri: 09:00 - 18:00<br>Sat - Mon: 10:00 - 14:00</p>
+            </div>
+        </div>
+    </section>
+
+     <!-- Contact Form -->
+     <section class="contact-form">
+        <h3>Get In Touch With Us</h3>
+        <form id="contactForm" method="POST">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="phone" placeholder="Phone Number" required>
+            <input type="text" id="subject" placeholder="Query" required>
+            <textarea id="message" placeholder="Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Promo Section -->
+    <section class="promo-section">
+        <h3>Experience the world with HappyVacation. Connect with us!</h3>
+        <p> Our team is passionate about travel and dedicated to providing exceptional service. 
+            Let us help you discover new cultures, explore stunning landscapes, and create unforgettable memories.</p>
+        <a href="#contact">Contact Us</a>
+    </section>
+
+
+    <!-- Footer Section -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h1>Happy Vacation</h1>
+                <p>Your journey starts here</p>
+            </div>
+            <div class="social-media">
+                <h3>Follow Us</h3>
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2024 Happy Vacation. All Right Reserved</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="travel.js"></script>
+    <script>
+        // Register Service Worker
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js')
+              .then(function(registration) {
+                console.log('ServiceWorker registration successful');
+              })
+              .catch(function(err) {
+                console.log('ServiceWorker registration failed: ', err);
+              });
+          });
+        }
+        </script>
+</body>
+</html>

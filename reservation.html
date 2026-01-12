@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Table</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
+    <link rel="stylesheet" href="reservation.css">
+</head>
+
+<body>
+
+    <!-- Reservation Section -->
+     
+    <div class="container-fluid p-5">
+        <div class="row">
+            <div class="col text-center">
+                <h2>BOOK YOUR TRAVEL JOURNEY WITH US!</h2>
+                <p>Secure your HappyVacation getaway today! Book your dream trip with ease and enjoy a stress-free planning experience.<br />
+                    Our user-friendly reservation system makes it simple to find the perfect vacation package for you.</p>
+                <form id="booking-form" class="mt-4">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputName">Your Name</label>
+                            <input type="text" class="form-control" id="inputName" placeholder="Your Name">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail">Email Address</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Email Address">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputPhone">Phone Number</label>
+                            <input type="text" class="form-control" id="inputPhone" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputGuests">Select Place</label>
+                            <select id="inputGuests" class="form-control">
+                                <option selected>Destination</option>
+                                <option>Manali</option>
+                                <option>Andhra Pradesh</option>
+                                <option>Karnataka</option>
+                                <option>Ladakh</option>
+                                <option>Manipur</option>
+                                <option>Rajasthan</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputStartDate">Booking start date </label>
+                            <input type="date" class="form-control" id="inputStartDate" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputEndDate">Booking end date</label>
+                            <input type="date" class="form-control" id="inputEndDate" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputOccasion">Trip Type</label>
+                            <select id="inputOccasion" class="form-control">
+                                <option selected>Select Type</option>
+                                <option>Business</option>
+                                <option>Adventure</option>
+                                <option>Family Trip</option>
+                                <option>Group Trip</option>
+                                <option>Solo Trip</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputSpecialRequest">Special Request</label>
+                            <textarea class="form-control" id="inputSpecialRequest" rows="2" placeholder="Enter any special requests"></textarea>
+                        </div>
+                    </div>                    
+
+                    
+                    <div class="form-group">
+                        <label for="inputMessage">Your Message</label>
+                        <textarea class="form-control" id="inputMessage" rows="4" placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feedback -->
+
+    <div class="container-fluid p-5">
+        <div class="row">
+            <div class="col text-center">
+                <h2>OUR HAPPY CUSTOMERS</h2>
+                <p>We are grateful for the kind words of our loyal customers, whose feedback is invaluable to our business!</p>
+                <div id="visitor-carousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <blockquote class="blockquote">
+                                <p class="mb-0">I had a fantastic journey with HappyVacation travel Pacakages. The prices offered was very affordable. Go for it!</p>
+                                <footer class="blockquote-footer">Kim Jenny</footer>
+                            </blockquote>
+                        </div>
+                        <div class="carousel-item">
+                            <blockquote class="blockquote">
+                                <p class="mb-0">The guides were very active and polite. They helped us to explore our destination in ease without any worry!</p>
+                                <footer class="blockquote-footer">Olivia</footer>
+                            </blockquote>
+                        </div>
+                        <div class="carousel-item">
+                            <blockquote class="blockquote">
+                                <p class="mb-0">The Agency offeres wide range of affordable tour packages and different types of adventure which is easy to explore. I had fantastic time!</p>
+                                <footer class="blockquote-footer">Haruto</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#visitor-carousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#visitor-carousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="reservation.js"></script>
+</body>
+
+</html>
