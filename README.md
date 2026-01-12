@@ -1,6 +1,4 @@
 # Happy-vacation
-# Happy-vacation
-
 ## Travel Website – Frontend Project
 
 ### Project Description
